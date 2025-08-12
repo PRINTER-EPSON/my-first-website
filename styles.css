@@ -1,0 +1,501 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Karanlık arka plan */
+    color: #ffffff; /* Beyaz metin rengi */
+}
+
+nav {
+    background-color: rgba(31, 31, 31, 0.8); /* Karanlık navigasyon arka planı, %80 opaklık */
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Gölgelendirme efekti */
+    position: relative; /* Pozisyonu ayarlamak için */
+    z-index: 2; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.8); /* Karanlık arka plan, %80 opaklık */
+    padding: 15px; /* İç boşluk */
+    position: relative; /* Pozisyonu ayarlamak için */
+    z-index: 2; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+.logo {
+    color: #00bcd4; /* Logo rengi */
+    text-decoration: none;
+    font-size: 1.8em;
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+.logo:hover {
+    color: #0097a7; /* Hover efekti */
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: #ffffff; /* Beyaz metin rengi */
+    text-decoration: none;
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+.nav-menu a:hover {
+    color: #00bcd4; /* Hover efekti */
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-image: url('https://images.wallpapersden.com/image/download/cybersecurity-core_bmdrZ2mUmZqaraWkpJRmbmdsrWZlbWU.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Pozisyonu ayarlamak için */
+    overflow: hidden;
+    height: 400px;
+}
+
+.hero-section::before {
+    content: ""; /* İçerik yok */
+    position: absolute; /* Pozisyonu ayarlamak için */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah arka plan, %50 opaklık */
+    z-index: 1; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+.hero-text {
+    max-width: 50%;
+    position: relative; /* Metin alanının üstte görünmesi için */
+    z-index: 2; /* Metnin üstte görünmesi için */
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin: 0;
+    animation: slideDown 1s ease forwards; /* Animasyon ekleniyor */
+    opacity: 0; /* Başlangıçta görünmez */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px); /* Yukarıdan kaydırma */
+        opacity: 0; /* Başlangıçta görünmez */
+    }
+    to {
+        transform: translateY(0); /* Son konum */
+        opacity: 1; /* Tam görünür */
+    }
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Renk geçişi */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Hover efekti */
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.5em;
+    color: #666;
+    border-radius: 10px; /* Kenar yuvarlama */
+}
+
+.project-description {
+    padding: 40px 20px;
+    background-color: #1f1f1f; /* Karanlık arka plan */
+}
+
+.project-description h2 {
+    color: #00bcd4; /* Başlık rengi */
+    margin-bottom: 10px;
+    animation: slideIn 1s ease forwards; /* Animasyon ekleniyor */
+}
+
+.project-description p {
+    margin: 10px 0;
+}
+
+.about-us {
+    padding: 50px 20px;
+    background-color: #1f1f1f; /* Karanlık arka plan */
+    position: relative; /* Konumlandırma için gerekli */
+}
+
+.about-container {
+    display: flex; /* Flex düzeni */
+    align-items: flex-start; /* Dikey hizalama */
+}
+
+.circular-image {
+    width: 150px; /* Daire çapı */
+    height: 150px; /* Daire çapı */
+    overflow: hidden; /* Taşmayı önle */
+    border-radius: 15px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
+}
+
+.circular-image img {
+    width: 100%; /* Resmi tam genişlikte yap */
+    height: 100%; /* Resmi tam yükseklikte yap */
+    object-fit: cover; /* Resmi kare şeklinde kes */
+    display: block; /* Resmi blok elemanı yap */
+}
+
+.about-text {
+    position: relative; /* Konumlandırma için gerekli */
+    z-index: 2; /* Metnin resmin üstünde görünmesi için */
+}
+
+.about-text h2 {
+    color: #00bcd4; /* Başlık rengi */
+    margin: 50;
+}
+
+.about-text p {
+    margin: 50px 5;
+    line-height: 1.5; /* Satır yüksekliği */
+}
+
+
+/* Genel animasyon ayarları */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px); /* Aşağıdan yukarı kaydırma */
+        opacity: 0; /* Başlangıçta görünmez */
+    }
+    to {
+        transform: translateY(0); /* Son konum */
+        opacity: 1; /* Tam görünür */
+    }
+}
+
+/* Diğer başlıklar için animasyon */
+.project-description h2,
+.about-text h2 {
+    animation: slideIn 1s ease forwards; /* Animasyon ekleniyor */
+    opacity: 0; /* Başlangıçta görünmez */
+}
+
+.project-description h2 {
+    color: #00bcd4; /* Başlık rengi */
+    margin-bottom: 10px;
+}
+
+.features {
+    text-align: center; /* Başlık ve paragrafı ortala */
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    color: #ffffff; /* Beyaz metin rengi */
+}
+
+.features-title {
+    color: #00bcd4; /* Başlık rengi */
+    margin-bottom: 20px; /* Başlık ile paragraf arasındaki boşluk */
+    font-size: 2.5em; /* Başlık boyutu */
+}
+
+.features-paragraph {
+    margin-bottom: 40px; /* Paragraf ile grid arasındaki boşluk */
+    font-size: 1.2em; /* Paragraf boyutu */
+}
+
+.grid-container {
+    display: flex; /* Flex düzeni */
+    justify-content: center; /* Tüm öğeleri yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    gap: 20px; /* Resimler arasındaki boşluk */
+}
+
+.grid-item {
+    width: 150px; /* Kare şeklinde görünmesi için genişlik */
+    height: 150px; /* Kare şeklinde görünmesi için yükseklik */
+    background-color: #ccc; /* Placeholder arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    overflow: hidden; /* Taşmayı önle */
+    display: flex; /* Flexbox kullanarak içeriği ortala */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Hover sırasında büyütme efekti */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Hover sırasında gölge efekti */
+}
+
+.grid-item img {
+    width: 100%; /* Resmi tam genişlikte yap */
+    height: 100%; /* Resmi tam yükseklikte yap */
+    object-fit: cover; /* Resmi kare şeklinde kes */
+    display: block; /* Resmi blok elemanı yap */
+    animation: fadeIn 0.5s ease forwards; /* Resim görünme animasyonu */
+    opacity: 0; /* Başlangıçta görünmez */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Başlangıçta görünmez */
+        transform: translateY(20px); /* Aşağıdan yukarı kaydırma */
+    }
+    to {
+        opacity: 1; /* Tam görünür */
+        transform: translateY(0); /* Son konum */
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Karanlık arka plan */
+    color: #ffffff; /* Beyaz metin rengi */
+}
+
+.content-block {
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    background-color: #1f1f1f; /* Karanlık arka plan */
+}
+
+.content-container {
+    display: flex; /* Flex düzeni */
+    align-items: center; /* Dikeyde ortala */
+    gap: 20px; /* Öğeler arasındaki boşluk */
+}
+
+/* İlk bölüm için metin ve resim alanı */
+.text-container {
+    max-width: 50%; /* Metin alanının genişliği */
+    color: #ffffff; /* Metin rengi */
+}
+
+.image-placeholder {
+    width: 300px; /* Resim alanı genişliği */
+    height: 200px; /* Resim alanı yüksekliği */
+    background-color: #ccc; /* Resim alanı rengi */
+    text-align: center; /* Metni ortala */
+    line-height: 200px; /* Dikey ortalama */
+    font-size: 1.5em; /* Yazı boyutu */
+    color: #666; /* Yazı rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+}
+
+/* İkinci bölüm için ters yönlendirme */
+.content-block:nth-of-type(2) .content-container {
+    flex-direction: row-reverse; /* Öğelerin sırasını ters çevir */
+}
+
+
+/* Animasyon süresi için her bir resme farklı bir gecikme ekleyin */
+.content-block:nth-of-type(1) .animated-image {
+    animation-delay: 0.2s; /* İlk resim için gecikme */
+}
+
+.content-block:nth-of-type(2) .animated-image {
+    animation-delay: 0.4s; /* İkinci resim için gecikme */
+}
+
+.team-section {
+    text-align: center; /* Başlık ve alt başlığı ortala */
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    background-color: #1f1f1f; /* Karanlık arka plan */
+}
+
+.team-section h2 {
+    color: #00bcd4; /* Başlık rengi */
+    margin-bottom: 10px; /* Başlık ile alt başlık arasındaki boşluk */
+}
+
+.team-section h3 {
+    color: #ffffff; /* Alt başlık rengi */
+    margin-bottom: 30px; /* Alt başlık ile profil resimleri arasındaki boşluk */
+}
+
+.profile-grid {
+    display: flex; /* Flex düzeni */
+    justify-content: center; /* Öğeleri yatayda ortala */
+    gap: 20px; /* Resimler arasındaki boşluk */
+}
+
+.profile-image {
+    width: 100px; /* Daire şekli için genişlik */
+    height: 100px; /* Daire şekli için yükseklik */
+    background-color: #ccc; /* Resim alanı rengi */
+    border-radius: 50%; /* Daire şekli */
+    display: flex; /* Flex düzeni */
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    position: relative; /* İçerik konumlandırması için */
+}
+
+.profile-info {
+    position: absolute; /* Resmin altında metin konumlandırması için */
+    bottom: -70px; /* Resmin altına yerleştir */
+    text-align: center; /* Metni ortala */
+    color: #ffffff; /* Metin rengi */
+}
+
+.profile-info p {
+    margin: 0; /* Paragraf arası boşluğu kaldır */
+    font-size: 0.9em; /* Yazı boyutu */
+}
+
+.pricing-section {
+    padding: 60px 20px; /* Üst ve alt boşluk artırıldı */
+    text-align: center; /* Metin ortalama */
+    background-size: cover; /* Resmi kapsayacak şekilde ayarla */
+    background-position: center bottom; /* Resmi ortala */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+}
+
+
+.card-container {
+    display: flex; /* Flex düzeni */
+    justify-content: center; /* Kartları yatayda ortala */
+    gap: 20px; /* Kartlar arasındaki boşluk */
+    flex-wrap: wrap; /* Mobilde üst üste gelmesini sağlar */
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Gölgelendirme efekti */
+    flex: 1; /* Kartların eşit genişlikte olmasını sağlar */
+    min-width: 250px; /* Minimum genişlik */
+}
+
+.free-version {
+    background-color: #474646; /* Gri-metalik arka plan rengi */
+}
+
+.premium-version {
+    background-color: #4d3702; /* Koyu altın-metalik arka plan rengi */
+}
+
+.card h2 {
+    margin-bottom: 15px; /* Başlık ile liste arasındaki boşluk */
+}
+
+.card ul {
+    list-style-type: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* İç boşluğu kaldır */
+}
+
+.card ul li {
+    margin: 10px 0; /* Liste öğeleri arasındaki boşluk */
+}
+
+.faq-section {
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    background-color: #1f1f1f; /* Karanlık arka plan */
+    color: #ffffff; /* Beyaz metin rengi */
+    text-align: center; /* Metin ortalama */
+}
+
+.faq-container {
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortala */
+}
+
+.faq-item {
+    background-color: #2c2c2c; /* Soru-cevap kutusu arka plan rengi */
+    border-radius: 8px; /* Kenar yuvarlama */
+    margin: 15px 0; /* Kutular arasındaki boşluk */
+    padding: 20px; /* İç boşluk */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Gölgelendirme efekti */
+}
+
+.faq-question {
+    margin: 0; /* Başlık ile altındaki boşluğu kaldır */
+    font-size: 1.2em; /* Başlık boyutu */
+    color: #00bcd4; /* Başlık rengi */
+}
+
+.faq-answer {
+    margin-top: 10px; /* Cevap ile soru arasındaki boşluk */
+    line-height: 1.5; /* Satır yüksekliği */
+}
+
+.contact-section {
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    background-color: #1f1f1f; /* Karanlık arka plan */
+    color: #ffffff; /* Beyaz metin rengi */
+}
+
+.contact-container {
+    display: flex; /* Flex düzeni */
+    justify-content: space-between; /* Elemanları yan yana yerleştir */
+    align-items: flex-start; /* Dikey hizalama */
+    gap: 20px; /* Elemanlar arasındaki boşluk */
+}
+
+.contact-info {
+    flex: 1; /* Metin alanı için esneklik */
+}
+
+.map-placeholder {
+    flex: 1; /* Harita alanı için esneklik */
+}
+
+footer {
+    background-color: #121212; /* Karanlık arka plan */
+    padding: 20px; /* İç boşluk */
+    text-align: center; /* Metni ortala */
+}
+
+.footer-content ul {
+    list-style-type: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* İç boşluğu kaldır */
+    margin: 0; /* Dış boşluğu kaldır */
+}
+
+.footer-content li {
+    display: inline; /* Yatayda sıralama */
+    margin: 0 15px; /* Bağlantılar arasındaki boşluk */
+}
+
+.footer-content a {
+    color: #00bcd4; /* Bağlantı rengi */
+    text-decoration: none; /* Altı çizgiyi kaldır */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Hover sırasında altı çizgi ekle */
+}
+
+.copyright {
+    margin-top: 15px; /* Üst boşluk */
+    color: #ffffff; /* Beyaz metin rengi */
+}
