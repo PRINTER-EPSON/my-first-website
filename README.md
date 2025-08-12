@@ -21,4 +21,4 @@ Web Sitesi Özellikleri
 İletişim Bilgileri
 
 Herhangi bir soru veya öneri için bizimle iletişime geçebilirsiniz:
-E-posta: privacy.scoured021@passinbox.com
+E-posta: privacy.enchilada395@passinbox.com
